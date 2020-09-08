@@ -41,7 +41,15 @@ public final class ThreadHook {
         }
         sHasHook = true;
         enableThreadHookNative();
+    }
 
+    /**
+     * 开启线程堆栈打印
+     */
+    static boolean printStack=true;
+
+    public static boolean enablePrintThreadStack() {
+        return printStack && BuildConfig.DEBUG;
     }
 
 
